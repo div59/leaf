@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Tomato Spider Mites</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+      <br/><br/> 1. The two-spotted spider mite is the most common mite species that attacks vegetable and fruit crops.
+        <br/> 2. They have up to 20 generations per year and are favored by excess nitrogen and dry and dusty conditions.
+        <br/> 3. Outbreaks are often caused by the use of broad-spectrum insecticides which interfere with the numerous natural enemies that help to manage mite populations. 
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. Avoid early season, broad-spectrum insecticide applications for other pests.
+        <br/>2. Do not over-fertilize
+        
+        <br/>3. Overhead irrigation or prolonged periods of rain can help reduce populations.
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li> Eliminate initial source of infection by removing infected plant debris and weeds, and use disease-free seeds.</li>
+    <li> If complete removal of plant debris is not possible, destroy by deep plowing immediately after harvest and follow with a one-year rotation with non-solanaceous crop.</li>
+    <li>Clean the area of any diseased plants and debris to help prevent Septoria leaf spot.</li>
+    <li>Overwatering your plants will help the disease spread.</li>
+    <li> Leave space between your plants to ensure good air circulation. </li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

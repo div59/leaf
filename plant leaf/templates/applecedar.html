@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Specieis  <b>Apple<b><br> Disease is <b>Apple Cedar apple rust</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms <br>
+Common corn rust, caused by the fungus Puccinia sorghi, is the most frequently occurring of the two primary rust diseases 
+You can identify apple scab by its characteristics:
+
+    <li> a few rust pustules can always be found in corn fields throughout the growing season,</li>
+    <li>symptoms generally do not appear until after tasseling.</li>
+    <li>These can be easily recognized and distinguished from other diseases by the development of dark, reddish-brown pustules (uredinia) scattered over both the upper and lower surfaces of the corn leaves </li>
+	<li>pustules may appear on any above ground part of the plant, but are most abundant on the leaves.</li>
+    <li>Pustules appear oval to elongate in shape, are generally small, less than 1/4 inch long, and are surrounded by the leaf epidermal layer,</li>
+    <!--<li>Young fruit that is infected often drops to the ground early</li>
+    <li>Mature fruit that was infected at harvest may develop apple scab in storage</li>-->
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li>use resistant corn hybrids.</li>
+    <li>Fungicides can also be beneficial, especially if applied early when few pustules have appeared on the leaves.</li>
+    <li>Remove and destroy all leaves and plant parts affected by rust.</li>
+    <li>You might have to destroy badly infected plants completely to prevent them infecting other plants of the same species.</li>
+    <li>Spray with a suitable rust control product containing fungicide, repeating as recommended.</li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+</html>
+
+{% endblock content %}

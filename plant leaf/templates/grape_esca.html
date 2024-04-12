@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is: Grape<br>Disease is <b>Grape Esca(Black Measles)</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+     <br/><br/> 1. Black Measles is caused by a complex of fungi that includes several species of Phaeoacremonium, primarily by P. aleophilum (currently known by the name of its sexual stage, Togninia minima), and by Phaeomoniella chlamydospora.
+        <br/> 2. The overwintering structures that produce spores (perithecia or pycnidia, depending on the pathogen) are embedded in diseased woody parts of vines. The overwintering structures that produce spores (perithecia or pycnidia, depending on the pathogen) are embedded in diseased woody parts of vines.
+        <br/> 3. During fall to spring rainfall, spores are released and wounds made by dormant pruning provide infection sites.
+        <br/> 4. Wounds may remain susceptible to infection for several weeks after pruning with susceptibility declining over time.
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. Post-infection practices (sanitation and vine surgery) for use in diseased, mature vineyards are not as effective and are far more costly than adopting preventative practices (delayed pruning, double pruning, and applications of pruning-wound protectants) in young vineyards. 
+        <br/>2. Sanitation and vine surgery may help maintain yields. In spring, look for dead spurs or for stunted shoots. Later in summer, when there is a reduced chance of rainfall, practice good sanitation by cutting off these cankered portions of the vine beyond the canker, to where wood appears healthy. Then remove diseased, woody debris from the vineyard and destroy it.
+        
+        <br/>3. The fungicides labeled as pruning-wound protectants, consider using alternative materials, such as a wound sealant with 5 percent boric acid in acrylic paint (Tech-Gro B-Lock), which is effective against Eutypa dieback and Esca, or an essential oil (Safecoat VitiSeal).
+<p>
+
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Orange Haunglongbing</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Orange Haunglongbing</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>Huanglongbing (HLB) is a major disease of citrus that has caused catastrophic damage to citrus trees worldwide. The disease causes reduced fruit quality and yield, tree decline, and eventual tree death. 
+You can identify Orange Haunglongbing by its characteristics:
+
+    <li> yellow shoots with pale green and yellow flushes;</li>
+    <li>non-symmetrical mottled leaves (shades of yellow and green on either side of the mid-rib)</li>
+    <li>thickened, leathery leaves</li>
+	<li>enlarged, corky mid-ribs of leaves; and</li>
+    <li>leaves with zinc deficiency symptoms that include upright leaves in relation to the shoot (acute shoot-leaf angles).</li>
+    <!--<li>Young fruit that is infected often drops to the ground early</li>
+    <li>Mature fruit that was infected at harvest may develop apple scab in storage</li>-->
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li>Use oxytetracycline and streptomycin in rotation. </li>
+    <li>Apply aqueous dilutions to trees when new growth occurs to protect flushes of new leaves against transmission of the huanglongbing (HLB) pathogen Candidatus Liberibacter asiaticus by the Asian citrus psyllid (ACP). Retreatment interval is a minimum of 21 days.</li>
+    <li>Just like for citrus canker, spraying Liquid Copper Fungicide can prevent or control citrus greasy spot and protect developing oranges.</li>
+    <li>You might have to destroy badly infected plants completely to prevent them infecting other plants of the same species.</li>
+    <li>Depending on how heavy the infection is on the leaves and fruit, you may spray again when late summer arrives.</li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Tomato Mosaic Virus</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+        <br/><br/> 1. Tomato mosaic virus and tobacco mosaic virus can exist for two years in dry soil or leaf debris, but will only persist one month if soil is moist. The viruses can also survive in infected root debris in the soil for up to two years.
+        <br/> 2. Seed can be infected and pass the virus to the plant but the disease is usually introduced and spread primarily through human activity. The virus can easily spread between plants on workers' hands, tools, and clothes with normal activities such as plant tying, removing of suckers, and harvest 
+        <br/> 3. The virus can even survive the tobacco curing process, and can spread from cigarettes and other tobacco products to plant material handled by workers after a cigarette
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. Purchase transplants only from reputable sources. Ask about the sanitation procedures they use to prevent disease.
+        <br/>2. Inspect transplants prior to purchase. Choose only transplants showing no clear symptoms.
+        
+        <br/>3. Avoid planting in fields where tomato root debris is present, as the virus can survive long-term in roots.
+        <br/>4. Wash hands with soap and water before and during the handling of plants to reduce potential spread between plants.
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li> Eliminate initial source of infection by removing infected plant debris and weeds, and use disease-free seeds.</li>
+    <li> If complete removal of plant debris is not possible, destroy by deep plowing immediately after harvest and follow with a one-year rotation with non-solanaceous crop.</li>
+    <li>Clean the area of any diseased plants and debris to help prevent Septoria leaf spot.</li>
+    <li>Overwatering your plants will help the disease spread.</li>
+    <li> Leave space between your plants to ensure good air circulation. </li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

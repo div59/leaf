@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Grape</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is <b>Peach</b><br/><b>Disease:Healthy</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <b>Crop</b>: Peach <br/>Disease: No disease<br/>
+        <br/><br/> Don't worry. Your crop is healthy. Keep it up !!!
+		
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		A great source of Vitamin C,peach helps to remove dark circles and blemishes.<br/>
+		Its macronutrients also help in reducing wrinkles and hence, Peach is a common ingredient in anti-ageing face masks. <br/>
+        Along with Vitamin A, K & C, the presence of Potassium in this fruit helps the skin to look younger by reducing age spots, fine lines and wrinkles. <br/>
+		They are rich in antioxidants which protect the skin from harsh rays of the Sun, harmful UV A&B rays and free radicals in the environment. <br>
+<br/>
+
+<br/><p>Confusion matrix</p>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Leaf Disease</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is: Squash<br>Disease is <b>Squash Powdery mildew</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+    <br/><br/> 1. Powdery mildew infections favor humid conditions with temperatures around 68-81° F
+        <br/> 2. In warm, dry conditions, new spores form and easily spread the disease.
+        <br/> 3. Symptoms of powdery mildew first appear mid to late summer in Minnesota.  The older leaves are more susceptible and powdery mildew will infect them first.
+        <br/> 4. Wind blows spores produced in leaf spots to infect other leaves.
+        <br/> 5. Under favorable conditions, powdery mildew can spread very rapidly, often covering all of the leaves.
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. Apply fertilizer based on soil test results. Avoid over-applying nitrogen.
+        <br/>2. Provide good air movement around plants through proper spacing, staking of plants and weed control.
+        
+        <br/>3. Once a week, examine five mature leaves for powdery mildew infection. In large plantings, repeat at 10 different locations in the field.
+        <br/>4. If susceptible varieties are growing in an area where powdery mildew has resulted in yield loss in the past, fungicide may be necessary.
+<p>
+
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

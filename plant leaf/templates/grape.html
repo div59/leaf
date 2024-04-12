@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Grape Black rot</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Grape Black rot</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms of Grape Black rot?<br>
+caused by the fungus Guignardia bidwellii, is a serious disease of cultivated and wild grapes.s the most frequently occurring of the two primary rust diseases 
+You can identify Grape Black rot by its characteristics:
+
+    <li> The disease is most destructive in warm, wet seasons. It attacks all green parts of the vine – leaves, shoots, leaf and fruit stems, tendrils, and fruit. </li>
+    <li>The most damaging effect is to the fruit</li>
+    <li>Warm, muggy weather in the spring and summer, along with unsprayed fruit of susceptible varieties, may cause fruit to become almost completely rotted by harvest time. </li>
+	<li>Black rot is not difficult to control if good cultural practices are followed along with the use of protective fungicide sprays.</li>
+    <!--<li>Pustules appear oval to elongate in shape, are generally small, less than 1/4 inch long, and are surrounded by the leaf epidermal layer,</li>-->
+    <!--<li>Young fruit that is infected often drops to the ground early</li>
+    <li>Mature fruit that was infected at harvest may develop apple scab in storage</li>-->
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li>Planting. Space vines properly and choose a planting site where the vines will be exposed to full sun and good air circulation. Keep the vines off the ground and insure they are properly tied, limiting the amount of time the vines remain wet thus reducing infection.</li>
+    <li>Sanitation. Keep the fruit planting and surrounding areas free of weeds and tall grass. This practice will promote lower relative humidity and rapid drying of vines and thereby limit fungal infection.</li>
+    <li>Pruning. Prune the vines in early winter during dormancy. Select only a few strong, healthy canes from the previous year’s growth to produce the following season’s crop. Remove these prunings from the vineyard and burn or destroy.</li>
+    <li>Cultivation. Cultivate the vineyard before budbreak to bury the mummified berries. Diseased berries covered with soil do not produce spores that will reach the developing vines. For homegrown grapes, use 2–3 inches of leaf mulch or fine bark to cover infected debris.</li>
+    <li>Fungicides. Use protective fungicide sprays. Pesticides registered to protect the developing new growth include copper, captan, ferbam, mancozeb, maneb, triadimefon, and ziram. Important spraying times are as new shoots are 2 to 4 inches long, and again when they are 10 to 15 inches long, just before bloom, just after bloom, and when the fruit has set.</li>
+	<li>Cultivars. Cultivars with large, juicy berries are the most susceptible. In general, grapes that ripen late in the season are affected the least. Most commercial cultivars are sufficiently resistant if adequately protected with a fungicide spray program.</li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

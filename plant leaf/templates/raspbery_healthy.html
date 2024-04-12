@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is <b>Raspberry</b><br/><b>Disease:Healthy</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <b>Crop</b>: Raspberry <br/>Disease: No disease<br/>
+        <br/><br/> Don't worry. Your crop is healthy. Keep it up !!!
+		
+		
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		People who are suffering with diabetes adopt many measures to get rid of. Raspberries are very beneficial for such patients. <br/>
+		Many people have lame cancer due to which they are very upset. Raspberry is very beneficial for such people because polyphenol and caritenoid are found in raspberries which help us in fighting cancer.<br/>
+        Due to less sleep and more work, people get diseases related to the eyes. People who are suffering with eye disease should consume raspberries because vitamin A is found in raspberries.<br/>
+		A bone related problem, you can make bones healthy with the help of raspberries as it contains pectin which maintains the right amount of calcium and phosphorus in the body.<br>
+		 people have a lot of indigestion problems but now it is very easy to get rid of this problem because raspberry is a fruit that is found everywhere and is very beneficial for digestion.
+		<br/>
+
+<br/><p>Confusion matrix</p>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+</html>
+
+{% endblock content %}

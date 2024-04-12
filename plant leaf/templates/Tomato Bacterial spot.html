@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Tomato Bacterial Spot</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+     <br/><br/> 1. The disease is caused by four species of Xanthomonas (X. euvesicatoria, X. gardneri, X. perforans, and X. vesicatoria). In North Carolina, X. perforans is the predominant species associated with bacterial spot on tomato and X. euvesicatoria is the predominant species associated with the disease on pepper.
+        <br/> 2. All four bacteria are strictly aerobic, gram-negative rods with a long whip-like flagellum (tail) that allows them to move in water, which allows them to invade wet plant tissue and cause infection.
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. The most effective management strategy is the use of pathogen-free certified seeds and disease-free transplants to prevent the introduction of the pathogen into greenhouses and field production areas. Inspect plants very carefully and reject infected transplants- including your own!
+        <br/>2. In transplant production greenhouses, minimize overwatering and handling of seedlings when they are wet.
+        
+        <br/>3. Trays, benches, tools, and greenhouse structures should be washed and sanitized between seedlings crops.
+        <br/>4. Do not spray, tie, harvest, or handle wet plants as that can spread the disease
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li> Eliminate initial source of infection by removing infected plant debris and weeds, and use disease-free seeds.</li>
+    <li> If complete removal of plant debris is not possible, destroy by deep plowing immediately after harvest and follow with a one-year rotation with non-solanaceous crop.</li>
+    <li>Clean the area of any diseased plants and debris to help prevent Septoria leaf spot.</li>
+    <li>Overwatering your plants will help the disease spread.</li>
+    <li> Leave space between your plants to ensure good air circulation. </li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

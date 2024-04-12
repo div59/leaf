@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Tomato Septoria leaf spot</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms of Tomato Septoria leaf spot?<br>
+Fungicides are very effective for control of Septoria leaf spot and applications are often necessary to supplement the control strategies previously outlined.
+You can identify Tomato Septoria leaf spot by its characteristics:
+
+    <li> Septoria leaf spot is caused by the fungus Septoria lycopersici. </li>
+    <li>This fungus can attack tomatoes at any stage of development, but symptoms usually first appear on the older, lower leaves and stems when plants are setting fruit. </li>
+    <li>Symptoms usually appear on leaves, but can occur on petioles, stems, and the calyx. </li>
+	<li> The first symptoms appear as small, water-soaked, circular spots 1/16 to 1/8" in diameter on the undersides of older leaves. </li>
+    <li>The centers of these spots then turn gray to tan and have a dark-brown margin. </li>
+    <!--<li>Young fruit that is infected often drops to the ground early</li>
+    <li>Mature fruit that was infected at harvest may develop apple scab in storage</li>-->
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li> Eliminate initial source of infection by removing infected plant debris and weeds, and use disease-free seeds.</li>
+    <li> If complete removal of plant debris is not possible, destroy by deep plowing immediately after harvest and follow with a one-year rotation with non-solanaceous crop.</li>
+    <li>Clean the area of any diseased plants and debris to help prevent Septoria leaf spot.</li>
+    <li>Overwatering your plants will help the disease spread.</li>
+    <li> Leave space between your plants to ensure good air circulation. </li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is <b>Potato</b><br/><b>Disease:Healthy</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <b>Crop</b>: Potato <br/>Disease: No disease<br/>
+        <br/><br/> Don't worry. Your crop is healthy. Keep it up !!!
+		
+		
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		Potatoes are a rich source of potassium, which is essential for maintaining healthy blood pressure levels. <br/>
+		Consuming potatoes with the skin on can increase your intake of dietary fiber.<br/>
+        Potatoes are a good source of vitamin B6, which plays a crucial role in brain development and function.<br/>
+		Potatoes are a good source of complex carbohydrates, which provide sustained energy throughout the day. <br>
+		Potatoes are naturally gluten-free, making them a suitable option for individuals with gluten intolerance or celiac disease.
+		<br/>
+
+<br/><p>Confusion matrix</p>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+</html>
+
+{% endblock content %}

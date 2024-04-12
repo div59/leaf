@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is <b>Cherry</b><br/><b>Disease:Healthy</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <b>Crop</b>: Cherry <br/>Disease: No disease<br/>
+        <br/><br/> Don't worry. Your crop is healthy. Keep it up !!!
+		
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		Cherry fruits are the best for treatment of Kapha Dosha imbalance in our body. <br/>
+		Cherry fruits and cherry fruit juices is widely used for various treatments & therapies. <br/>
+        More cherries are included in the diet for the people who want to reduce weight. <br/>
+		Special salads with cherry fruits and vegetables are prepared for the diabetics.<br>
+		It is also used in skin care and beauty packages, where cherries are used for external treatments also.<br/>
+		Cherry fruits help in reduce belly fat and it is good for reducing body weight.<br/>
+		The anti- oxidant properties of Cherry fruit prevents ageing and it is good to prevent cancer also.
+<br/>
+
+<br/><p>Confusion matrix</p>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

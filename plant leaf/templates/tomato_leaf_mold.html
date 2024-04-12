@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is: Tomato<br>Disease is <b>Tomato Leaf Mold</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+    <br/><br/> 1. Leaf mold is caused by the fungus Passalora fulva (previously called Fulvia fulva or Cladosporium fulvum). It is not known to be pathogenic on any plant other than tomato.
+        <br/> 2. Leaf spots grow together and turn brown. Leaves wither and die but often remain attached to the plant.
+        <br/> 3. Fruit infections start as a smooth black irregular area on the stem end of the fruit. As the disease progresses, the infected area becomes sunken, dry and leathery.
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. Use drip irrigation and avoid watering foliage.
+        <br/>2. Space plants to provide good air movement between rows and individual plants.
+        
+        <br/>3. Stake, string or prune to increase airflow in and around the plant.
+        <br/>4. Sterilize stakes, ties, trellises etc. with 10 percent household bleach or commercial sanitizer.
+        <br/>5. Circulate air in greenhouses or tunnels with vents and fans and by rolling up high tunnel sides to reduce humidity around plants.
+        <br/>6. Keep night temperatures in greenhouses higher than outside temperatures to avoid dew formation on the foliage.
+        <br/>7. Remove crop residue at the end of the season. Burn it or bury it away from tomato production areas.
+<p>
+
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>Peach Bacterial spot</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms of Peach Bacterial spot?<br>
+Leaf yellowing and shot holes due to bacterial spot, with relatively clean fruit. 
+You can identify Peach Bacterial spot spot by its characteristics:
+
+    <li> Bacterial spot is an important disease of peaches, nectarines, apricots, and plums caused by Xanthomonas arboricola pv. pruni (XAP), formerly Xanthomonas campestris pv. pruni. </li>
+    <li>The disease’s symptoms include fruit spots, leaf spots and twig cankers.</li>
+    <li>Leaf tip yellowing and flecked fruit due to bacterial spot.</li>
+	<li> Leaf yellowing and shot holes due to bacterial spot, with relatively clean fruit</li>
+    <li>Severe leaf spot infections can cause early defoliation. </li>
+    <!--<li>Young fruit that is infected often drops to the ground early</li>
+    <li>Mature fruit that was infected at harvest may develop apple scab in storage</li>-->
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li> the best strategy is to use cultivars with better bacterial spot resistance.</li>
+    <li> Compounds available for use on peach and nectarine for bacterial spot include copper, oxytetracycline (Mycoshield and generic equivalents), and syllit+captan; however, repeated applications are typically necessary for even minimal disease control.</li>
+    <li>Syllit+captan is used as a moderately effective alternative to oxytetracycline, but with some risk of phytotoxicity if used repeatedly without intervening rains. </li>
+    <li>We avoid the use of spray additives such as foliar nutrients, and any surfactants with penetrating characteristics when applying syllit + captan.</li>
+    <li> Copper provides a third alternative for bacterial spot control where needed but with a somewhat greater risk of phytotoxicity. </li>
+
+</p>
+ <p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

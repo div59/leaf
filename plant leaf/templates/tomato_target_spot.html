@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Disease is <b>tomato_target_spot</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <p>What are the symptoms ?<br>
+<br/> Cause of disease:
+       <br/><br/> 1. The fungus causes plants to lose their leaves; it is a major disease. If infection occurs before the fruit has developed, yields are low.
+        <br/> 2. This is a common disease on tomato in Pacific island countries. The disease occurs in the screen house and in the field.
+        <br/><br/> How to prevent/cure the disease <br/>
+        <br/>1. Remove a few branches from the lower part of the plants to allow better airflow at the base
+        <br/>2. Remove and burn the lower leaves as soon as the disease is seen, especially after the lower fruit trusses have been picked.
+        
+        <br/>3. Keep plots free from weeds, as some may be hosts of the fungus.
+        <br/>4. Do not use overhead irrigation; otherwise, it will create conditions for spore production and infection.
+</p>
+<p>
+<center><b>GENERAL PREVENTION MEASURES<b></center>
+
+    <li> Eliminate initial source of infection by removing infected plant debris and weeds, and use disease-free seeds.</li>
+    <li> If complete removal of plant debris is not possible, destroy by deep plowing immediately after harvest and follow with a one-year rotation with non-solanaceous crop.</li>
+    <li>Clean the area of any diseased plants and debris to help prevent Septoria leaf spot.</li>
+    <li>Overwatering your plants will help the disease spread.</li>
+    <li> Leave space between your plants to ensure good air circulation. </li>
+
+</p>
+<p>Confusion matrix</>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+   </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is <b>Soyabean</b><br/><b>Disease:Healthy</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <b>Crop</b>: Soyabean <br/>Disease: No disease<br/>
+        <br/><br/> Don't worry. Your crop is healthy. Keep it up !!!
+		
+		
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		It may have anti-diabetic properties,It may have an antioxidant effect  <br/>
+		It may possess anti-cancer properties,It may have anti-inflammatory properties  <br/>
+        It may have cardio-protective properties,It may possess anti-microbial properties <br/>
+		It may have anti-obesity properties,It may have cholesterol-lowering properties <br>
+		It may possess properties that may protect the liver,It may have anti-HIV properties
+		<br/>
+
+<br/><p>Confusion matrix</p>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+<br/>
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+   </body>
+</html>
+
+{% endblock content %}

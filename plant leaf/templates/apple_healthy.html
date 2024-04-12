@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock title %}
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Apple Scab</title>
+   </head>
+   <body>
+   {% block content %}
+     <center><h1>Detected Species is <b>Apple</b><br/><b>Disease:Healthy</b><h1></center>
+     <!-- <img src = "test_images/"
+      alt = "Learn HTML5" height = "250" width = "270" />-->
+	  <h3>Accuracy is: {{r}}%</h3>
+	  <b>Crop</b>: Apple <br/>Disease: No disease<br/>
+        <br/><br/> Don't worry. Your crop is healthy. Keep it up !!!
+		
+		<br/><br><b>Used in Ayurvedic</b><br/>
+		This is the perfect antidote for hot and humid summers,<br/>
+		apples are dry and mostly astringent, they can increase vata.<br/>
+        If you have more pitta in your system, with excess heat and strong digestion, apples are amazing.
+		Apples are also loaded with pectin, a type of fiber that feeds good gut bacteria. Research suggests that, because of pectin, apples may have a protective effect against obesity, type 2 diabetes, and heart disease.
+
+<p>Confusion matrix</p>
+<img src="{{url_for('static', filename='confusion.png')}}" class="d-block w-100" alt="...">
+
+<p>ROC</p>
+<img src="{{url_for('static', filename='roc.png')}}" class="d-block w-100" alt="...">
+
+
+
+   </body>
+</html>
+
+{% endblock content %}
