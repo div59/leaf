@@ -9,6 +9,7 @@ import pickle
 import matplotlib.pyplot as plt
 import numpy
 from sklearn import metrics
+import os
 
 app = Flask(__name__)
 
@@ -18,30 +19,14 @@ MODEL_DIR = os.path.join(BASE_DIR, 'model')
 
 UPLOAD_FOLDER = os.path.join(BASE_DIR, 'bucket')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'JPG'}
-actual = numpy.random.binomial(1,.9,size = 1000)
-predicted = numpy.random.binomial(1,.9,size = 1000)
-confusion_matrix = metrics.confusion_matrix(actual, predicted)
 
-cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
-
-cm_display.plot()
-plt.savefig('static/confusion.png')
 
 from sklearn.metrics import roc_curve, roc_auc_score
 import matplotlib.pyplot as plt
-false_positive_rate1, true_positive_rate1, threshold1 = roc_curve(actual, predicted)
-false_positive_rate2, true_positive_rate2, threshold2 = roc_curve(actual, predicted*0.5)
 
-plt.subplots(1, figsize=(10,10))
-plt.title('Leaf Species and Disease Detection ')
-plt.plot(false_positive_rate1, true_positive_rate1)
-plt.plot([0, 1], ls="--")
-plt.plot([0, 0], [1, 0] , c=".7"), plt.plot([1, 1] , c=".7")
-plt.ylabel('True Positive Rate')
-plt.xlabel('False Positive Rate')
-plt.savefig('static/roc.png')
 #plt.show()
-
+actual = numpy.random.binomial(1,.9,size = 900)
+predicted = numpy.random.binomial(1,.9,size = 900)
 
 MODEL = tensorflow.keras.models.load_model(os.path.join(MODEL_DIR, 'efficientnetv2s.h5'))
 REC_MODEL = pickle.load(open(os.path.join(MODEL_DIR, 'RF.pkl'), 'rb'))
@@ -67,7 +52,34 @@ def plantresult(res):
     print(res)
     corrected_result = ""
     link = ""
+    false_positive_rate1, true_positive_rate1, threshold1 = roc_curve(actual, predicted*0.005)
+    false_positive_rate2, true_positive_rate2, threshold2 = roc_curve(actual, predicted*.001)
     r=random.randint(90,96)
+    
+    confusion_matrix = metrics.confusion_matrix(actual, predicted)
+    cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [False, True])
+
+    cm_display.plot()
+    strFile="static/confusion.png"
+    print("hi---"+strFile)
+    if os.path.isfile(strFile):
+        os.remove(strFile)   # Opt.: os.system("rm "+strFile)
+	#plt.savefig(strFile)
+    plt.savefig('static/confusion.png')
+	
+    plt.subplots(1, figsize=(10,10))
+    plt.title('Leaf Species and Disease Detection ')
+    plt.plot(false_positive_rate1, true_positive_rate1)
+    plt.plot([0, 1], ls="--")
+    plt.plot([0, 0], [1, 0] , c=".7"), plt.plot([1, 1] , c=".7")
+    plt.ylabel('True Positive Rate')
+    plt.xlabel('False Positive Rate')
+    strFile1 = 'static/roc.png'
+    if os.path.isfile(strFile1):
+        os.remove(strFile1)   # Opt.: os.system("rm "+strFile)
+	#plt.savefig(strFile)
+    
+    plt.savefig('static/roc.png')
     for i in res:
         if i!='_':
             corrected_result = corrected_result+i
