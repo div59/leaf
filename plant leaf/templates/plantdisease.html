@@ -2,25 +2,25 @@
 
 {% block content %}
 
-<div class="row-sm p-sm-5">
+<div class="row-sm p-sm-5" style=" background-color: aliceblue; color: black;" >
     <div class="col-sm-12 p-sm-5">
         <p class="text-center">
-            <h3 class="text-center" style="color:green; font-family: Arial, sans-serif;">
+            <h1 class="text-center" style="color:green; font-family: Arial, sans-serif; font-weight: bold;">
                 Leaf Classification
-            </h3>
+            </h1>
             <p class="text-center">
-                Upload a leaf image of Plant to Know about which species a leaf belongs to
+               <h2 class="text-center">Upload a leaf Image of Plant to Know about which species a leaf belongs to</h2> 
             </p>
         </p>
         <p>
-            <h4 class="text-center">
+            <h4 class="text-center mt-5 mb-5">
                 Upload Image file
             </h4>
         </p>
         <div class="d-flex justify-content-center">
             <form method=post enctype=multipart/form-data>
-                <input type=file name=file>
-                <input type=submit value=Upload>
+                <input type=file name=file style="color: blue;">
+                <input type=submit value=Predict class="btn btn-primary" style="font-size: 20px; ">
             </form>
         </div>
     </div>
